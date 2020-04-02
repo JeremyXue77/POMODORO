@@ -17,5 +17,6 @@ class AlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Alarm"
+        view.backgroundColor = .systemRed
     }
 }

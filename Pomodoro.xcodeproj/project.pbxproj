@@ -20,6 +20,8 @@
 		5E7508072436089B0067444D /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7508052436089B0067444D /* AlarmViewController.swift */; };
 		5E7508082436089B0067444D /* AlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7508062436089B0067444D /* AlarmViewController.xib */; };
 		5E75080B243608C80067444D /* AlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080A243608C80067444D /* AlarmCoordinator.swift */; };
+		5E75080D24360B6E0067444D /* AlarmNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080C24360B6E0067444D /* AlarmNavigationController.swift */; };
+		5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080E24360B870067444D /* HistoryNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		5E7508052436089B0067444D /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		5E7508062436089B0067444D /* AlarmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmViewController.xib; sourceTree = "<group>"; };
 		5E75080A243608C80067444D /* AlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinator.swift; sourceTree = "<group>"; };
+		5E75080C24360B6E0067444D /* AlarmNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNavigationController.swift; sourceTree = "<group>"; };
+		5E75080E24360B870067444D /* HistoryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 		5E7507FC243603320067444D /* History */ = {
 			isa = PBXGroup;
 			children = (
+				5E75080E24360B870067444D /* HistoryNavigationController.swift */,
 				5E7507FD243603510067444D /* HistoryViewController.swift */,
 				5E7507FE243603510067444D /* HistoryViewController.xib */,
 			);
@@ -175,6 +180,7 @@
 		5E7508042436088A0067444D /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				5E75080C24360B6E0067444D /* AlarmNavigationController.swift */,
 				5E7508052436089B0067444D /* AlarmViewController.swift */,
 				5E7508062436089B0067444D /* AlarmViewController.xib */,
 			);
@@ -295,8 +301,10 @@
 				5E7507F52435FEFF0067444D /* Coordinator.swift in Sources */,
 				5E75080B243608C80067444D /* AlarmCoordinator.swift in Sources */,
 				5E750803243603A30067444D /* HistoryCoordinator.swift in Sources */,
+				5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */,
 				5E7507CB2435FB6B0067444D /* AppDelegate.swift in Sources */,
 				5E7507CD2435FB6B0067444D /* SceneDelegate.swift in Sources */,
+				5E75080D24360B6E0067444D /* AlarmNavigationController.swift in Sources */,
 				5E7507FF243603510067444D /* HistoryViewController.swift in Sources */,
 				5E7507F02435FEAA0067444D /* MainTabBarController.swift in Sources */,
 			);
