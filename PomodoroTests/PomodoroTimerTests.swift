@@ -46,6 +46,8 @@ class PomodoroTimerTests: XCTestCase {
         }
         wait(for: [promise], timeout: 10)
         XCTAssertEqual(pomodoroTimer.state, PomodoroTimer.State.stop)
+        let timeString = TimeStringMaker.make(from: pomodoroTimer.remainingTime, cotains: [.minute, .second])
+        XCTAssertEqual(timeString, "00:05")
     }
 
 }
