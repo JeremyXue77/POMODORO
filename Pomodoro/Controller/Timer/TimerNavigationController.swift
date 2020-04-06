@@ -20,6 +20,7 @@ class TimerNavigationController: UINavigationController {
     private func setup() {
         navigationBar.isTranslucent = false
         navigationBar.barTintColor = ThemeColor.darkRed2
+        navigationBar.tintColor = .white
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }

@@ -29,6 +29,8 @@
 		5E750800243603510067444D /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7507FE243603510067444D /* HistoryViewController.xib */; };
 		5E750803243603A30067444D /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E750802243603A30067444D /* HistoryCoordinator.swift */; };
 		5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080E24360B870067444D /* HistoryNavigationController.swift */; };
+		5EA58AB5243B6A8B009E3CA9 /* TimerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AB3243B6A8B009E3CA9 /* TimerMenuTableViewController.swift */; };
+		5EA58AB6243B6A8B009E3CA9 /* TimerMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		5E7507FE243603510067444D /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		5E750802243603A30067444D /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
 		5E75080E24360B870067444D /* HistoryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
+		5EA58AB3243B6A8B009E3CA9 /* TimerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMenuTableViewController.swift; sourceTree = "<group>"; };
+		5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerMenuTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,8 @@
 				5E63F20E243AB942008B7D02 /* TimerNavigationController.swift */,
 				5E63F210243AB95E008B7D02 /* TimerViewController.swift */,
 				5E63F211243AB95E008B7D02 /* TimerViewController.xib */,
+				5EA58AB3243B6A8B009E3CA9 /* TimerMenuTableViewController.swift */,
+				5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				5E7507D42435FB6D0067444D /* Assets.xcassets in Resources */,
 				5E63F213243AB95E008B7D02 /* TimerViewController.xib in Resources */,
 				5E750800243603510067444D /* HistoryViewController.xib in Resources */,
+				5EA58AB6243B6A8B009E3CA9 /* TimerMenuTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +422,7 @@
 				5E63F23D243ADE74008B7D02 /* TimeIntervalExtension.swift in Sources */,
 				5E7507FF243603510067444D /* HistoryViewController.swift in Sources */,
 				5E7507F02435FEAA0067444D /* MainTabBarController.swift in Sources */,
+				5EA58AB5243B6A8B009E3CA9 /* TimerMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

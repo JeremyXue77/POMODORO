@@ -14,6 +14,7 @@ class TimerViewController: UIViewController {
     weak var coordinator: TimerCoordinator?
     private var timerView: TimerView { view as! TimerView }
     private var viewModel: TimerViewModel?
+
    
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -21,5 +22,10 @@ class TimerViewController: UIViewController {
         title = "Timer"
         view.backgroundColor = ThemeColor.darkRed
         viewModel = TimerViewModel(timerView: timerView, pomodoroTimer: PomodoroTimer(duration: 60))
+    }
+    
+    // MARK: Actions
+    @objc private func showTimerMenu(_ sender: UIBarButtonItem) {
+        
     }
 }

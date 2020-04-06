@@ -27,7 +27,14 @@ class TimerCoordinator: Coordinator {
         vc.tabBarItem = UITabBarItem(title: "Timer",
                                      image: UIImage(systemName: "alarm"),
                                      tag: 0)
+        vc.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "text.justify"), style: .plain, target: self, action: #selector(showMenu))
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    @objc func showMenu() {
+        let vc = TimerMenuTableViewController(style: .insetGrouped)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }
 

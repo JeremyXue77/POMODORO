@@ -13,20 +13,26 @@ class TimerViewModel {
     
     // MARK: Properties
     private let timerView: TimerView
-    private let pomodoroTimer: PomodoroTimer
+    private var pomodoroTimer: PomodoroTimer
     
     // MARK: Initializers
     init(timerView: TimerView, pomodoroTimer: PomodoroTimer) {
         self.timerView = timerView
         self.pomodoroTimer = pomodoroTimer
-        self.timerView.updateTimeLabel(timeInterval: pomodoroTimer.duration)
         self.pomodoroTimer.delegate = self
         self.timerView.delegate = self
+        self.timerView.updateTimeLabel(timeInterval: pomodoroTimer.duration)
     }
 }
 
 // MARK: - TimerViewDelegate
 extension TimerViewModel: TimerViewDelegate {
+    
+    func createTimer(_ pomodoroTimer: PomodoroTimer) {
+        self.pomodoroTimer = pomodoroTimer
+        self.pomodoroTimer.delegate = self
+        timerView.updateTimeLabel(timeInterval: pomodoroTimer.duration)
+    }
     
     func play() {
         switch pomodoroTimer.state {
