@@ -7,27 +7,49 @@
 //
 
 import XCTest
+@testable import Pomodoro
 
 class PomodoroTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testTimerIntervalConversion() {
+        let hours = 12
+        let minutes = 23
+        let seconds = 34
+        let timeInterval = TimeInterval((hours * 3600) + (minutes * 60) + seconds)
+        XCTAssertEqual(timeInterval.hours, hours)
+        XCTAssertEqual(timeInterval.minutes, minutes)
+        XCTAssertEqual(timeInterval.seconds, seconds)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testTimeString() {
+        let hours = 12
+        let minutes = 23
+        let seconds = 34
+        let timeInterval = TimeInterval((hours * 3600) + (minutes * 60) + seconds)
+        XCTAssertEqual("12:23:34", TimeStringMaker.make(from: timeInterval))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testTimeStringWithTimeData() {
+        let hours = 12
+        let minutes = 23
+        let seconds = 34
+        let timeInterval = TimeInterval((hours * 3600) + (minutes * 60) + seconds)
+        XCTAssertEqual("23:34", TimeStringMaker.make(from: timeInterval, cotains: [.minute, .second]))
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testTimeStringWithSeconsData() {
+        let hours = 12
+        let minutes = 23
+        let seconds = 34
+        let timeInterval = TimeInterval((hours * 3600) + (minutes * 60) + seconds)
+        XCTAssertEqual("34", TimeStringMaker.make(from: timeInterval, cotains: [.second]))
     }
-
+    
+    func testTimeStringEmptyValue() {
+        let hours = 0
+        let minutes = 0
+        let seconds = 0
+        let timeInterval = TimeInterval((hours * 3600) + (minutes * 60) + seconds)
+        XCTAssertEqual("00:00:00", TimeStringMaker.make(from: timeInterval))
+    }
 }
