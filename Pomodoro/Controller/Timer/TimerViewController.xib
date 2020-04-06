@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,7 +14,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="TimerView" customModule="Pomodoro" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -26,17 +27,47 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-V7-ayz">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-V7-ayz">
                             <rect key="frame" x="0.0" y="135.5" width="350" height="66"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jY7-Tf-9nD">
-                                    <rect key="frame" x="0.0" y="0.5" width="175" height="65"/>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-lr-LM7">
-                                    <rect key="frame" x="175" y="0.5" width="175" height="65"/>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0E-MR-ZWz">
+                                    <rect key="frame" x="0.0" y="0.0" width="171" height="66"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOh-Iw-jGA">
+                                            <rect key="frame" x="52.5" y="0.0" width="66" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="BOh-Iw-jGA" secondAttribute="height" id="xya-8w-50I"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="play.circle" catalog="system"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="BOh-Iw-jGA" secondAttribute="bottom" id="VZF-D0-GRV"/>
+                                        <constraint firstItem="BOh-Iw-jGA" firstAttribute="top" secondItem="v0E-MR-ZWz" secondAttribute="top" id="fl2-Vp-CKS"/>
+                                        <constraint firstItem="BOh-Iw-jGA" firstAttribute="centerX" secondItem="v0E-MR-ZWz" secondAttribute="centerX" id="l6h-pr-lrh"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-K3-yc3">
+                                    <rect key="frame" x="179" y="0.0" width="171" height="66"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhe-YF-4UP">
+                                            <rect key="frame" x="52.5" y="0.0" width="66" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Uhe-YF-4UP" secondAttribute="height" id="d3A-Si-v8H"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="stop.circle" catalog="system"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Uhe-YF-4UP" firstAttribute="top" secondItem="7zc-K3-yc3" secondAttribute="top" id="pPx-MI-Vod"/>
+                                        <constraint firstAttribute="bottom" secondItem="Uhe-YF-4UP" secondAttribute="bottom" id="pSk-4r-2To"/>
+                                        <constraint firstItem="Uhe-YF-4UP" firstAttribute="centerX" secondItem="7zc-K3-yc3" secondAttribute="centerX" id="xxM-Qc-pe5"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="66" id="xT9-4x-SXL"/>
@@ -52,6 +83,11 @@
                 <constraint firstItem="tTR-MK-GYT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ogw-UY-BZs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="playButton" destination="BOh-Iw-jGA" id="mGw-T9-9co"/>
+                <outlet property="stopButton" destination="Uhe-YF-4UP" id="soW-g6-Bim"/>
+                <outlet property="timeLabel" destination="bYs-Eh-hOf" id="wXt-42-3JB"/>
+            </connections>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
