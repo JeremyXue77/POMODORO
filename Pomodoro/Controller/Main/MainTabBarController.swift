@@ -32,8 +32,8 @@ class MainTabBarController: UITabBarController {
         coordinators.forEach({$0.start()})
         viewControllers = coordinators.map({$0.navigationController})
         tabBar.barStyle = .black
-        tabBar.tintColor = .systemRed
-        tabBar.unselectedItemTintColor = .systemGray
+        tabBar.tintColor = .white
+        tabBar.unselectedItemTintColor = .systemGray2
         tabBar.isTranslucent = false
     }
 }
