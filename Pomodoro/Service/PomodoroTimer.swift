@@ -9,6 +9,8 @@
 import Foundation
 
 protocol PomodoroTimerDelegate: AnyObject {
+    func update(remainingTime: TimeInterval)
+    func stateChanged(_ state: PomodoroTimer.State)
     func finish()
 }
 
@@ -16,12 +18,16 @@ class PomodoroTimer {
     
     // MARK: Nested types
     enum State {
-        case start, pasue, stop
+        case playing, pasue, stop
     }
     
     // MARK: Properties
     weak var delegate: PomodoroTimerDelegate?
-    var state: State = .stop
+    var state: State = .stop {
+        didSet {
+            delegate?.stateChanged(state)
+        }
+    }
     var duration: TimeInterval
     var currentTime: TimeInterval = 0
     var remainingTime: TimeInterval {
@@ -43,13 +49,15 @@ class PomodoroTimer {
 // MARK: - Pomodoro timer methods
 extension PomodoroTimer {
     
-    func start() {
-        state = .start
+    func play() {
+        state = .playing
         timer = Timer.scheduledTimer(withTimeInterval: 1.0,
                                      repeats: true,
                                      block: { [weak self](timer) in
-                                        self?.currentTime += 1
-                                        self?.checkCurrentTime()
+                                        guard let self = self else { return }
+                                        self.checkCurrentTime()
+                                        self.currentTime += 1
+                                        
         })
         timer?.fire()
     }
@@ -64,11 +72,15 @@ extension PomodoroTimer {
         currentTime = 0
         timer?.invalidate()
         timer = nil
+        delegate?.update(remainingTime: remainingTime)
     }
     
     private func checkCurrentTime() {
-        if currentTime >= duration {
+        if currentTime > duration {
+            delegate?.finish()
             stop()
+        } else {
+            self.delegate?.update(remainingTime: self.remainingTime)
         }
     }
 }

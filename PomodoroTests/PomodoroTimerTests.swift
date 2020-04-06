@@ -15,7 +15,7 @@ class PomodoroTimerTests: XCTestCase {
     let pomodoroTimer = PomodoroTimer(duration: 5)
 
     func testTimerPause() {
-        pomodoroTimer.start()
+        pomodoroTimer.play()
         let promise = expectation(description: "Pasue Timer")
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.pomodoroTimer.pasue()
@@ -28,7 +28,7 @@ class PomodoroTimerTests: XCTestCase {
     }
     
     func testTimerStop() {
-        pomodoroTimer.start()
+        pomodoroTimer.play()
         let promise = expectation(description: "Stop Timer")
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.pomodoroTimer.stop()
@@ -39,7 +39,7 @@ class PomodoroTimerTests: XCTestCase {
     }
     
     func testTimerAutomaicStop() {
-        pomodoroTimer.start()
+        pomodoroTimer.play()
         let promise = expectation(description: "Stop Timer")
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             promise.fulfill()
