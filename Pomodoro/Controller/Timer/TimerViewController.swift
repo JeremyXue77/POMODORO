@@ -17,6 +17,6 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Timer"
-        view.backgroundColor = .systemRed
+        view.backgroundColor = ThemeColor.darkRed
     }
 }

@@ -15,6 +15,6 @@ class HistoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "History"
-        view.backgroundColor = .systemRed
+        view.backgroundColor = ThemeColor.darkRed2
     }
 }

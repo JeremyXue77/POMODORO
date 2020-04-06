@@ -19,7 +19,7 @@ class HistoryNavigationController: UINavigationController {
     // MARK: Setting methods
     private func setup() {
         navigationBar.isTranslucent = false
-        navigationBar.barStyle = .black
+        navigationBar.barTintColor = ThemeColor.darkRed2
         navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }

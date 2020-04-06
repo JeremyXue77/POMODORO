@@ -12,6 +12,7 @@
 		5E63F213243AB95E008B7D02 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E63F211243AB95E008B7D02 /* TimerViewController.xib */; };
 		5E63F215243AB9B1008B7D02 /* TimerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63F214243AB9B1008B7D02 /* TimerCoordinator.swift */; };
 		5E63F219243ABBAB008B7D02 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63F218243ABBAB008B7D02 /* TimerView.swift */; };
+		5E63F21C243AC1E8008B7D02 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63F21B243AC1E8008B7D02 /* ThemeColor.swift */; };
 		5E7507CB2435FB6B0067444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7507CA2435FB6B0067444D /* AppDelegate.swift */; };
 		5E7507CD2435FB6B0067444D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7507CC2435FB6B0067444D /* SceneDelegate.swift */; };
 		5E7507D42435FB6D0067444D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7507D32435FB6D0067444D /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		5E63F211243AB95E008B7D02 /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		5E63F214243AB9B1008B7D02 /* TimerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCoordinator.swift; sourceTree = "<group>"; };
 		5E63F218243ABBAB008B7D02 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5E63F21B243AC1E8008B7D02 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		5E7507C72435FB6B0067444D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7507CA2435FB6B0067444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7507CC2435FB6B0067444D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		5E63F21A243AC1D2008B7D02 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5E63F21B243AC1E8008B7D02 /* ThemeColor.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		5E7507BE2435FB6B0067444D = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		5E7507C92435FB6B0067444D /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				5E63F21A243AC1D2008B7D02 /* Constant */,
 				5E7507F22435FEC40067444D /* Coordinator */,
 				5E63F216243ABB87008B7D02 /* View */,
 				5E7507EE2435FE760067444D /* Controller */,
@@ -321,6 +332,7 @@
 				5E63F212243AB95E008B7D02 /* TimerViewController.swift in Sources */,
 				5E750803243603A30067444D /* HistoryCoordinator.swift in Sources */,
 				5E63F215243AB9B1008B7D02 /* TimerCoordinator.swift in Sources */,
+				5E63F21C243AC1E8008B7D02 /* ThemeColor.swift in Sources */,
 				5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */,
 				5E63F219243ABBAB008B7D02 /* TimerView.swift in Sources */,
 				5E7507CB2435FB6B0067444D /* AppDelegate.swift in Sources */,
