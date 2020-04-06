@@ -1,15 +1,15 @@
 //
-//  AlarmCoordinator.swift
+//  TimerCoordinator.swift
 //  Pomodoro
 //
-//  Created by Jeremy Xue on 2020/4/2.
+//  Created by Jeremy Xue on 2020/4/6.
 //  Copyright © 2020 jeremyxue. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class AlarmCoordinator: Coordinator {
+class TimerCoordinator: Coordinator {
     
     // MARK: Properties
     var childCoordinator: [Coordinator] = []
@@ -22,11 +22,12 @@ class AlarmCoordinator: Coordinator {
     
     // MARK: Methods
     func start() {
-        let vc = AlarmViewController()
+        let vc = TimerViewController()
         vc.coordinator = self
-        vc.tabBarItem = UITabBarItem(title: "Alarm",
+        vc.tabBarItem = UITabBarItem(title: "Timer",
                                      image: UIImage(systemName: "alarm"),
                                      tag: 0)
         navigationController.pushViewController(vc, animated: false)
     }
 }
+

@@ -1,15 +1,15 @@
 //
-//  AlarmNavigationController.swift
+//  TimerNavigationController.swift
 //  Pomodoro
 //
-//  Created by Jeremy Xue on 2020/4/2.
+//  Created by Jeremy Xue on 2020/4/6.
 //  Copyright © 2020 jeremyxue. All rights reserved.
 //
 
 import UIKit
 
-class AlarmNavigationController: UINavigationController {
-
+class TimerNavigationController: UINavigationController {
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

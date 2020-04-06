@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E63F20F243AB942008B7D02 /* TimerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63F20E243AB942008B7D02 /* TimerNavigationController.swift */; };
+		5E63F212243AB95E008B7D02 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63F210243AB95E008B7D02 /* TimerViewController.swift */; };
+		5E63F213243AB95E008B7D02 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E63F211243AB95E008B7D02 /* TimerViewController.xib */; };
+		5E63F215243AB9B1008B7D02 /* TimerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63F214243AB9B1008B7D02 /* TimerCoordinator.swift */; };
 		5E7507CB2435FB6B0067444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7507CA2435FB6B0067444D /* AppDelegate.swift */; };
 		5E7507CD2435FB6B0067444D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7507CC2435FB6B0067444D /* SceneDelegate.swift */; };
 		5E7507D42435FB6D0067444D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7507D32435FB6D0067444D /* Assets.xcassets */; };
@@ -17,10 +21,6 @@
 		5E7507FF243603510067444D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7507FD243603510067444D /* HistoryViewController.swift */; };
 		5E750800243603510067444D /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7507FE243603510067444D /* HistoryViewController.xib */; };
 		5E750803243603A30067444D /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E750802243603A30067444D /* HistoryCoordinator.swift */; };
-		5E7508072436089B0067444D /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7508052436089B0067444D /* AlarmViewController.swift */; };
-		5E7508082436089B0067444D /* AlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7508062436089B0067444D /* AlarmViewController.xib */; };
-		5E75080B243608C80067444D /* AlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080A243608C80067444D /* AlarmCoordinator.swift */; };
-		5E75080D24360B6E0067444D /* AlarmNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080C24360B6E0067444D /* AlarmNavigationController.swift */; };
 		5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080E24360B870067444D /* HistoryNavigationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E63F20E243AB942008B7D02 /* TimerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNavigationController.swift; sourceTree = "<group>"; };
+		5E63F210243AB95E008B7D02 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		5E63F211243AB95E008B7D02 /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
+		5E63F214243AB9B1008B7D02 /* TimerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCoordinator.swift; sourceTree = "<group>"; };
 		5E7507C72435FB6B0067444D /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7507CA2435FB6B0067444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7507CC2435FB6B0067444D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,10 +53,6 @@
 		5E7507FD243603510067444D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		5E7507FE243603510067444D /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		5E750802243603A30067444D /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
-		5E7508052436089B0067444D /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
-		5E7508062436089B0067444D /* AlarmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmViewController.xib; sourceTree = "<group>"; };
-		5E75080A243608C80067444D /* AlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinator.swift; sourceTree = "<group>"; };
-		5E75080C24360B6E0067444D /* AlarmNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNavigationController.swift; sourceTree = "<group>"; };
 		5E75080E24360B870067444D /* HistoryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				5E7507F12435FEAE0067444D /* Main */,
-				5E7508042436088A0067444D /* Alarm */,
+				5E7508042436088A0067444D /* Timer */,
 				5E7507FC243603320067444D /* History */,
 			);
 			path = Controller;
@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5E7507F42435FEFF0067444D /* Coordinator.swift */,
-				5E750809243608AE0067444D /* Alarm */,
+				5E750809243608AE0067444D /* Timer */,
 				5E750801243603930067444D /* History */,
 			);
 			path = Coordinator;
@@ -177,22 +177,22 @@
 			path = History;
 			sourceTree = "<group>";
 		};
-		5E7508042436088A0067444D /* Alarm */ = {
+		5E7508042436088A0067444D /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				5E75080C24360B6E0067444D /* AlarmNavigationController.swift */,
-				5E7508052436089B0067444D /* AlarmViewController.swift */,
-				5E7508062436089B0067444D /* AlarmViewController.xib */,
+				5E63F20E243AB942008B7D02 /* TimerNavigationController.swift */,
+				5E63F210243AB95E008B7D02 /* TimerViewController.swift */,
+				5E63F211243AB95E008B7D02 /* TimerViewController.xib */,
 			);
-			path = Alarm;
+			path = Timer;
 			sourceTree = "<group>";
 		};
-		5E750809243608AE0067444D /* Alarm */ = {
+		5E750809243608AE0067444D /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				5E75080A243608C80067444D /* AlarmCoordinator.swift */,
+				5E63F214243AB9B1008B7D02 /* TimerCoordinator.swift */,
 			);
-			path = Alarm;
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7508082436089B0067444D /* AlarmViewController.xib in Resources */,
 				5E7507D72435FB6D0067444D /* LaunchScreen.storyboard in Resources */,
 				5E7507D42435FB6D0067444D /* Assets.xcassets in Resources */,
+				5E63F213243AB95E008B7D02 /* TimerViewController.xib in Resources */,
 				5E750800243603510067444D /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7508072436089B0067444D /* AlarmViewController.swift in Sources */,
+				5E63F20F243AB942008B7D02 /* TimerNavigationController.swift in Sources */,
 				5E7507F52435FEFF0067444D /* Coordinator.swift in Sources */,
-				5E75080B243608C80067444D /* AlarmCoordinator.swift in Sources */,
+				5E63F212243AB95E008B7D02 /* TimerViewController.swift in Sources */,
 				5E750803243603A30067444D /* HistoryCoordinator.swift in Sources */,
+				5E63F215243AB9B1008B7D02 /* TimerCoordinator.swift in Sources */,
 				5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */,
 				5E7507CB2435FB6B0067444D /* AppDelegate.swift in Sources */,
 				5E7507CD2435FB6B0067444D /* SceneDelegate.swift in Sources */,
-				5E75080D24360B6E0067444D /* AlarmNavigationController.swift in Sources */,
 				5E7507FF243603510067444D /* HistoryViewController.swift in Sources */,
 				5E7507F02435FEAA0067444D /* MainTabBarController.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 class MainTabBarController: UITabBarController {
     
     // MARK: Properties
-    private let mainCoordinator = AlarmCoordinator(navigationController: AlarmNavigationController())
+    private let mainCoordinator = TimerCoordinator(navigationController: TimerNavigationController())
     private let historyCoordinator = HistoryCoordinator(navigationController: HistoryNavigationController())
     
     private var coordinators: [Coordinator] {
