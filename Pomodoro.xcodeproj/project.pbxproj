@@ -31,6 +31,8 @@
 		5E75080F24360B870067444D /* HistoryNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E75080E24360B870067444D /* HistoryNavigationController.swift */; };
 		5EA58AB5243B6A8B009E3CA9 /* TimerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AB3243B6A8B009E3CA9 /* TimerMenuTableViewController.swift */; };
 		5EA58AB6243B6A8B009E3CA9 /* TimerMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */; };
+		5EA58AB8243C1312009E3CA9 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AB7243C1312009E3CA9 /* SwitchTableViewCell.swift */; };
+		5EA58ABA243C1635009E3CA9 /* TimerMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AB9243C1635009E3CA9 /* TimerMenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		5E75080E24360B870067444D /* HistoryNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryNavigationController.swift; sourceTree = "<group>"; };
 		5EA58AB3243B6A8B009E3CA9 /* TimerMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMenuTableViewController.swift; sourceTree = "<group>"; };
 		5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerMenuTableViewController.xib; sourceTree = "<group>"; };
+		5EA58AB7243C1312009E3CA9 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		5EA58AB9243C1635009E3CA9 /* TimerMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMenuTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				5E63F218243ABBAB008B7D02 /* TimerView.swift */,
+				5EA58AB7243C1312009E3CA9 /* SwitchTableViewCell.swift */,
+				5EA58AB9243C1635009E3CA9 /* TimerMenuTableViewCell.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -409,8 +415,10 @@
 				5E63F20F243AB942008B7D02 /* TimerNavigationController.swift in Sources */,
 				5E7507F52435FEFF0067444D /* Coordinator.swift in Sources */,
 				5E63F241243AEC16008B7D02 /* TimeStringMaker.swift in Sources */,
+				5EA58ABA243C1635009E3CA9 /* TimerMenuTableViewCell.swift in Sources */,
 				5E63F245243AF526008B7D02 /* PomodoroTimer.swift in Sources */,
 				5E63F212243AB95E008B7D02 /* TimerViewController.swift in Sources */,
+				5EA58AB8243C1312009E3CA9 /* SwitchTableViewCell.swift in Sources */,
 				5E750803243603A30067444D /* HistoryCoordinator.swift in Sources */,
 				5E63F215243AB9B1008B7D02 /* TimerCoordinator.swift in Sources */,
 				5E63F21C243AC1E8008B7D02 /* ThemeColor.swift in Sources */,

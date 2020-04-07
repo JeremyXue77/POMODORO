@@ -21,11 +21,6 @@ class TimerViewController: UIViewController {
         super.viewDidLoad()
         title = "Timer"
         view.backgroundColor = ThemeColor.darkRed
-        viewModel = TimerViewModel(timerView: timerView, pomodoroTimer: PomodoroTimer(duration: 60))
-    }
-    
-    // MARK: Actions
-    @objc private func showTimerMenu(_ sender: UIBarButtonItem) {
-        
+        viewModel = TimerViewModel(timerView: timerView, pomodoroTimer: PomodoroTimer.standard)
     }
 }

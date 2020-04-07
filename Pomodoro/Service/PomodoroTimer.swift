@@ -21,6 +21,9 @@ class PomodoroTimer {
         case playing, pasue, stop
     }
     
+    // MARK: Static Properties
+    static let standard = PomodoroTimer(duration: 25)
+    
     // MARK: Properties
     weak var delegate: PomodoroTimerDelegate?
     var state: State = .stop {
@@ -41,7 +44,7 @@ class PomodoroTimer {
     }
     
     // MARK: Initailizers
-    init(duration: TimeInterval) {
+    private init(duration: TimeInterval) {
         self.duration = duration
     }
 }

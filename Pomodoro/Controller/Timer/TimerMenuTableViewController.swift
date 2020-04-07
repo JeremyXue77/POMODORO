@@ -8,7 +8,8 @@
 
 import UIKit
 
-/// Timer menu page structures
+// MARK: - Menu enumeration
+/// Menu enum used to TimerMenuTableViewController's tableView structures
 enum Menu {
     case setting([Setting])
     case feature([Feature])
@@ -29,23 +30,24 @@ enum Menu {
     }
     
     enum Setting: CaseIterable {
-        case duration, vibrate, `repeat`
+        case duration, breakTime, `autoRepeat`
         
         var title: String {
             switch self {
-            case .duration: return "Duration"
-            case .vibrate:  return "Vibrate"
-            case .repeat:   return "Repeat"
+            case .duration:    return "Duration"
+            case .breakTime:   return "Break Time"
+            case .autoRepeat:  return "Auto-Repeat"
             }
         }
     }
 
     enum Feature: CaseIterable {
-        case themeColor
+        case vibrate, sound
         
         var title: String {
             switch self {
-            case .themeColor: return "Theme Color"
+            case .vibrate:    return "Vibrate"
+            case .sound:      return "Sound"
             }
         }
     }
@@ -90,25 +92,44 @@ class TimerMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        
         switch sections[indexPath.section] {
-        case .setting(let settings):
-            let setting = settings[indexPath.row]
-            cell.textLabel?.text = setting.title
-        case .feature(let features):
-            let feature = features[indexPath.row]
-            cell.textLabel?.text = feature.title
-        case .other(let others):
-            let other = others[indexPath.row]
-            cell.textLabel?.text = other.title
+        case .setting(let settings): return configurationSettingCell(settings, indexPath)
+        case .feature(let features): return configurationFeatureCell(features, indexPath)
+        case .other(let others):     return configurationOtherCell(others, indexPath)
         }
-        cell.backgroundColor = ThemeColor.semiRed
-        cell.textLabel?.textColor = ThemeColor.darkRed2
-        cell.selectedBackgroundView = UIView()
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        sections[section].title
+    }
+    
+    // MARK: - CofigurationCells
+    fileprivate func configurationSettingCell(_ settings: ([Menu.Setting]),
+                                              _ indexPath: IndexPath) -> UITableViewCell {
+        let cell = TimerMenuTableViewCell(style: .default, reuseIdentifier: nil)
+        let setting = settings[indexPath.row]
+        cell.textLabel?.text = setting.title
         return cell
     }
     
+    fileprivate func configurationFeatureCell(_ features: ([Menu.Feature]),
+                                              _ indexPath: IndexPath) -> UITableViewCell {
+        let cell = SwitchTableViewCell(style: .default, reuseIdentifier: nil)
+        let feature = features[indexPath.row]
+        cell.textLabel?.text = feature.title
+        cell.cellSwitch.isOn = true
+        return cell
+    }
+    
+    fileprivate func configurationOtherCell(_ others: ([Menu.Other]),
+                                            _ indexPath: IndexPath) -> UITableViewCell {
+        let cell = TimerMenuTableViewCell(style: .default, reuseIdentifier: nil)
+        let other = others[indexPath.row]
+        cell.textLabel?.text = other.title
+        return cell
+    }
+    
+    // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -116,9 +137,5 @@ class TimerMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let headerView = view as? UITableViewHeaderFooterView else { return }
         headerView.textLabel?.textColor = .white
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        sections[section].title
     }
 }
