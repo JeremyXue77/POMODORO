@@ -106,10 +106,17 @@ class TimerMenuTableViewController: UITableViewController {
     // MARK: - CofigurationCells
     fileprivate func configurationSettingCell(_ settings: ([Menu.Setting]),
                                               _ indexPath: IndexPath) -> UITableViewCell {
-        let cell = TimerMenuTableViewCell(style: .default, reuseIdentifier: nil)
         let setting = settings[indexPath.row]
-        cell.textLabel?.text = setting.title
-        return cell
+        switch setting {
+        case .autoRepeat:
+            let cell = SwitchTableViewCell(style: .default, reuseIdentifier: nil)
+            cell.textLabel?.text = setting.title
+            return cell
+        default:
+            let cell = TimerMenuTableViewCell(style: .default, reuseIdentifier: nil)
+            cell.textLabel?.text = setting.title
+            return cell
+        }
     }
     
     fileprivate func configurationFeatureCell(_ features: ([Menu.Feature]),
@@ -117,7 +124,6 @@ class TimerMenuTableViewController: UITableViewController {
         let cell = SwitchTableViewCell(style: .default, reuseIdentifier: nil)
         let feature = features[indexPath.row]
         cell.textLabel?.text = feature.title
-        cell.cellSwitch.isOn = true
         return cell
     }
     
