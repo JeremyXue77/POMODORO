@@ -137,7 +137,18 @@ class TimerMenuTableViewController: UITableViewController {
     
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        switch sections[indexPath.section] {
+        case .setting(let settings):
+            switch settings[indexPath.row] {
+            case .duration:  coordinator?.showDurationPicker(durationType: .timer)
+            case .breakTime: coordinator?.showDurationPicker(durationType: .breakTimer)
+            case .autoRepeat: break
+            }
+        case .feature(let features):
+            break
+        case .other(let others):
+            break
+        }
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

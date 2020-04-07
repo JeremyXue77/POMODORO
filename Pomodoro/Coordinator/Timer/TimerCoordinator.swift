@@ -36,5 +36,11 @@ class TimerCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func showDurationPicker(durationType: DurationType) {
+        let vc = DurationPickerViewController(durationType: durationType)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 

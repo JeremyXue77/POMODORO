@@ -33,6 +33,9 @@
 		5EA58AB6243B6A8B009E3CA9 /* TimerMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */; };
 		5EA58AB8243C1312009E3CA9 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AB7243C1312009E3CA9 /* SwitchTableViewCell.swift */; };
 		5EA58ABA243C1635009E3CA9 /* TimerMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AB9243C1635009E3CA9 /* TimerMenuTableViewCell.swift */; };
+		5EA58AC1243C1B72009E3CA9 /* DurationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58ABF243C1B72009E3CA9 /* DurationPickerViewController.swift */; };
+		5EA58AC2243C1B72009E3CA9 /* DurationPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA58AC0243C1B72009E3CA9 /* DurationPickerViewController.xib */; };
+		5EA58AC5243CBCA3009E3CA9 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA58AC4243CBCA3009E3CA9 /* DesignableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerMenuTableViewController.xib; sourceTree = "<group>"; };
 		5EA58AB7243C1312009E3CA9 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		5EA58AB9243C1635009E3CA9 /* TimerMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMenuTableViewCell.swift; sourceTree = "<group>"; };
+		5EA58ABF243C1B72009E3CA9 /* DurationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationPickerViewController.swift; sourceTree = "<group>"; };
+		5EA58AC0243C1B72009E3CA9 /* DurationPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationPickerViewController.xib; sourceTree = "<group>"; };
+		5EA58AC4243CBCA3009E3CA9 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		5E63F23F243AEC07008B7D02 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5EA58AC3243CBC86009E3CA9 /* Designable */,
 				5E63F240243AEC16008B7D02 /* TimeStringMaker.swift */,
 			);
 			path = Helper;
@@ -288,6 +295,8 @@
 				5E63F211243AB95E008B7D02 /* TimerViewController.xib */,
 				5EA58AB3243B6A8B009E3CA9 /* TimerMenuTableViewController.swift */,
 				5EA58AB4243B6A8B009E3CA9 /* TimerMenuTableViewController.xib */,
+				5EA58ABF243C1B72009E3CA9 /* DurationPickerViewController.swift */,
+				5EA58AC0243C1B72009E3CA9 /* DurationPickerViewController.xib */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -298,6 +307,14 @@
 				5E63F214243AB9B1008B7D02 /* TimerCoordinator.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		5EA58AC3243CBC86009E3CA9 /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				5EA58AC4243CBCA3009E3CA9 /* DesignableButton.swift */,
+			);
+			path = Designable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +409,7 @@
 				5E7507D42435FB6D0067444D /* Assets.xcassets in Resources */,
 				5E63F213243AB95E008B7D02 /* TimerViewController.xib in Resources */,
 				5E750800243603510067444D /* HistoryViewController.xib in Resources */,
+				5EA58AC2243C1B72009E3CA9 /* DurationPickerViewController.xib in Resources */,
 				5EA58AB6243B6A8B009E3CA9 /* TimerMenuTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +432,7 @@
 			files = (
 				5E63F20F243AB942008B7D02 /* TimerNavigationController.swift in Sources */,
 				5E7507F52435FEFF0067444D /* Coordinator.swift in Sources */,
+				5EA58AC5243CBCA3009E3CA9 /* DesignableButton.swift in Sources */,
 				5E63F241243AEC16008B7D02 /* TimeStringMaker.swift in Sources */,
 				5EA58ABA243C1635009E3CA9 /* TimerMenuTableViewCell.swift in Sources */,
 				5E63F245243AF526008B7D02 /* PomodoroTimer.swift in Sources */,
@@ -428,6 +447,7 @@
 				5E7507CD2435FB6B0067444D /* SceneDelegate.swift in Sources */,
 				5E63F24B243B1811008B7D02 /* TimerViewModel.swift in Sources */,
 				5E63F23D243ADE74008B7D02 /* TimeIntervalExtension.swift in Sources */,
+				5EA58AC1243C1B72009E3CA9 /* DurationPickerViewController.swift in Sources */,
 				5E7507FF243603510067444D /* HistoryViewController.swift in Sources */,
 				5E7507F02435FEAA0067444D /* MainTabBarController.swift in Sources */,
 				5EA58AB5243B6A8B009E3CA9 /* TimerMenuTableViewController.swift in Sources */,
